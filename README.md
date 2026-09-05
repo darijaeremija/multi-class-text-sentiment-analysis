@@ -183,5 +183,5 @@ Only the supplied course references are listed here; student-generated exam note
 ## Authors
 
 - Jelena Komazec, 1046/2025
-- Darija Eremija, 1032/2026
+- Darija Eremija, 1032/2025
 - Aleksandar Stoiljkovic, 1043/2023
