@@ -16,14 +16,12 @@ Macro F1 is the primary comparison metric because the validation and test sets a
 | --- | --- | ---: | ---: | ---: |
 | LinearSVC | Balanced | 0.8640 | 0.7282 | 0.8800 |
 | LinearSVC | Imbalanced | 0.9192 | 0.7542 | 0.9131 |
-| Bidirectional LSTM | Balanced | 0.8936 | 0.7573 | 0.90* |
-| Bidirectional LSTM | Imbalanced | 0.9188 | 0.7655 | 0.92* |
+| Bidirectional LSTM | Balanced | 0.8936 | 0.7573 | 0.9046 |
+| Bidirectional LSTM | Imbalanced | 0.9188 | 0.7655 | 0.9167 |
 | MLP | Balanced | 0.8686 | 0.7338 | 0.8834 |
 | MLP | Imbalanced | 0.9212 | 0.7635 | 0.9166 |
 | DistilBERT | Balanced | 0.9218 | 0.8232 | 0.9293 |
 | DistilBERT | Imbalanced | **0.9448** | **0.8368** | **0.9446** |
-
-\* The LSTM notebook's classification reports display weighted F1 rounded to two decimal places.
 
 ### Classical Model Validation Results
 
@@ -86,14 +84,12 @@ The LSTM notebook uses its own NLTK tokenization pipeline, a minimum token frequ
 | Deep learning | PyTorch, TorchText | LSTM architecture, datasets, training, and vocabulary creation |
 | Transformers | Transformers, Datasets, Accelerate | DistilBERT tokenization, fine-tuning, and evaluation |
 | Visualization | Matplotlib, Seaborn | Class distributions, learning curves, and confusion matrices |
-| Interactive environment | Jupyter | Running and documenting the experiments |
 
 ## Prerequisites
 
 Before running the notebooks, ensure that you have:
 
-- Python 3 with `venv` and `pip` available;
-- Jupyter Notebook or JupyterLab;
+- Python 3 with `pip` available;
 - enough memory to hold the TF-IDF matrices and train the selected model;
 - internet access for the initial NLTK resources and Hugging Face model downloads;
 - `data/Reviews.csv`, downloaded from the [Amazon Fine Food Reviews dataset](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews);
@@ -105,23 +101,15 @@ PyTorch, TorchText, CUDA, and the installed GPU driver must use mutually compati
 
 ## Installation
 
-Create and activate a virtual environment, then install the notebook dependencies:
+Install the notebook dependencies with pip:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install jupyter pandas numpy scipy scikit-learn matplotlib seaborn nltk joblib torch torchtext transformers datasets accelerate
+python -m pip install pandas numpy scipy scikit-learn matplotlib seaborn nltk joblib torch torchtext transformers datasets accelerate
 python -m nltk.downloader wordnet omw-1.4 punkt averaged_perceptron_tagger
 ```
 
 Download `glove.6B.300d.txt` from the [GloVe 6B dataset](https://www.kaggle.com/datasets/thanakomsn/glove6b300dtxt) if you plan to run the LSTM experiments.
-
-Start Jupyter and execute the notebooks in order:
-
-```bash
-jupyter lab
-```
 
 ## Generated Artifacts
 
