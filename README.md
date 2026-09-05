@@ -99,6 +99,8 @@ A CUDA-capable GPU is optional. Classical models run well on CPU, but GPU accele
 
 PyTorch, TorchText, CUDA, and the installed GPU driver must use mutually compatible versions. Consult the [PyTorch installation selector](https://pytorch.org/get-started/locally/) when installing with CUDA support.
 
+> **Note on versions:** [03_LSTM_model.ipynb](03_LSTM_model.ipynb) uses PyTorch 2.3 with TorchText, while [05_DistilBERT.ipynb](05_DistilBERT.ipynb) uses PyTorch 2.11 for full Transformers compatibility. If you run the notebooks separately, adjust the PyTorch version accordingly.
+
 ## Installation
 
 Install the notebook dependencies with pip:
