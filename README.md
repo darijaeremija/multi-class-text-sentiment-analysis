@@ -16,7 +16,7 @@ Macro F1 is the primary comparison metric because the validation and test sets a
 | --- | --- | ---: | ---: | ---: |
 | LinearSVC | Balanced | 0.8640 | 0.7282 | 0.8800 |
 | LinearSVC | Imbalanced | 0.9192 | 0.7542 | 0.9131 |
-| Bidirectional LSTM | Balanced | 0.8936 | 0.7573 | 0.9046 |
+| Bidirectional LSTM | Balanced | 0.8972 | 0.7650 | 0.9046 |
 | Bidirectional LSTM | Imbalanced | 0.9188 | 0.7655 | 0.9167 |
 | MLP | Balanced | 0.8686 | 0.7338 | 0.8834 |
 | MLP | Imbalanced | 0.9222 | 0.7592 | 0.9157 |
